@@ -1,0 +1,10 @@
+Design note: how Bot 2 was built and how it handles objections
+
+Goal and approach. The bot's job is to book the renewal at the highest achievable value, not just the base premium. Priya is a consultative advisor: she explains first, listens second, and recommends third, with a clear close at the end.
+Key design choices
+•	Explain the IDV change in plain words before talking price. The drop from Rs 9,00,000 to Rs 8,00,000 is framed as normal depreciation that lowers the premium and matters mainly for theft or total loss, not for repairs. This removes the "you are cheating me" reaction early.
+•	Anchor, then discount. The bot quotes the standard Rs 20,000 first and brings in the Rs 15,000 renew-today price as a lever when the customer hesitates or compares, so there is still something to trade when a competitor quote appears.
+•	Discovery before add-ons. It asks how and where the car is driven and parked, and ties every add-on to the answer (street parking and waterlogging lead to Engine Protect, repair bills lead to Zero Dep, highway driving leads to RSA and Tyre Protect).
+•	Add-on ladder. It never accepts "basic only" after a single pitch. It makes up to three attempts with different reasons, starting from the recommended pack (Zero Dep + Engine Protect + RSA) and dropping to single add-ons, then respects the customer's final no.
+•	Honesty guardrails. No guarantees on claims, no invented figures, no claims about what a competitor quote includes. Unknown questions get a "let me confirm and send details by SMS" answer.
+•	Voice realism. Short turns, one question at a time, amounts in words, Hindi-English mixing, no repeated sentences, spoken dates, and a single clean confirmation at the close.

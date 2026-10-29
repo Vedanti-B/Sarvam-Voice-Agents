@@ -1,0 +1,2 @@
+Greeting
+Hello, am I speaking with customer_name? This is Priya from insurer_name. Your Maruti Brezza policy is due for renewal. Do you have two minutes?

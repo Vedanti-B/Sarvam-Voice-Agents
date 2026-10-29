@@ -1,0 +1,3 @@
+Greeting
+
+Hello, am I speaking with customer_name? This is Arjun, calling from lender_name about your personal loan account.
